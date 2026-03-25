@@ -1,0 +1,162 @@
+# ============================================================================
+# PYTHON
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv
+/venv
+/env
+/.venv
+/ENV
+/env.bak
+/venv.bak
+.python-version
+
+# ============================================================================
+# NODEJS / FRONTEND
+# ============================================================================
+node_modules/
+/frontend_dashboard/node_modules/
+/frontend_dashboard/dist/
+/frontend_dashboard/build/
+.npm
+package-lock.json
+yarn.lock
+
+# ============================================================================
+# IDE & EDITOR
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.iml
+.DS_Store
+Thumbs.db
+
+# ============================================================================
+# ENVIRONMENT & SECRETS
+# ============================================================================
+.env
+.env.local
+.env.*.local
+.env.*.private
+
+# ============================================================================
+# GENERATED FILES, LOGS & TEST RESULTS
+# ============================================================================
+/test_results/
+/phase3_honeypot/honeypot_logs/
+/backend_api/backend_checkpoints/
+/models/checkpoints/
+*.log
+*.log.*
+/.pytest_cache/
+/.coverage
+htmlcov/
+
+# ============================================================================
+# DATA FILES (exclude generated data, keep source if needed)
+# ============================================================================
+/data/*.json
+/data/*.csv
+*.pkl
+*.pickle
+*.joblib
+/models/data/*.json
+/models/data/*.csv
+
+# ============================================================================
+# ML MODEL CHECKPOINTS (exclude large trained models)
+# ============================================================================
+*.pt
+*.pth
+*.ckpt
+checkpoint*.tar
+model_*.h5
+.weight
+
+# ============================================================================
+# OS SPECIFIC
+# ============================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# ============================================================================
+# PROJECT-SPECIFIC
+# ============================================================================
+phase3_honeypot/honeypot_logs/
+phase3_honeypot/*.log
+backend_checkpoints/
+models/checkpoints/
+demo_alerts/
+*.h5
+*.weights
+
+# ML Models & checkpoints
+*.pth
+*.pt
+*.pb
+*.onnx
+*.joblib
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# JavaScript/Node.js (if used in frontend)
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+/coverage
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js (if used)
+/.next/
+/out/
+
+# Misc
+*.pem
+.vercel
+*.tsbuildinfo
+next-env.d.ts
