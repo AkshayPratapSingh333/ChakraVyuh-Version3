@@ -4,6 +4,7 @@ import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
+import FederatedDashboard from './components/FederatedDashboard';
 import './Dashboard.css';
 
 const API_BASE = 'http://localhost:8000/api/v1';
@@ -14,7 +15,7 @@ const WS_URL = 'ws://localhost:8000/ws/dashboard';
 // ============================================================================
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState('testing'); // 'testing' or 'soc'
+  const [activeTab, setActiveTab] = useState('testing'); // 'testing', 'soc', or 'federated'
   const [loading, setLoading] = useState(false);
 
   return (
@@ -37,11 +38,18 @@ export default function Dashboard() {
         >
           🛡️ SOC Dashboard
         </button>
+        <button 
+          className={`nav-btn ${activeTab === 'federated' ? 'active' : ''}`}
+          onClick={() => setActiveTab('federated')}
+        >
+          🤝 Federated Learning
+        </button>
       </nav>
 
       <main className="dashboard-main">
         {activeTab === 'testing' && <TestingDashboard />}
         {activeTab === 'soc' && <SocDashboard />}
+        {activeTab === 'federated' && <FederatedDashboard />}
       </main>
     </div>
   );

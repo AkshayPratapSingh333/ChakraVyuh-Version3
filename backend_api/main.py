@@ -35,6 +35,14 @@ except (ImportError, OSError) as e:
 from test_framework.payload_generator import TestPayloadGenerator
 from test_framework.test_runner import TestRunner
 
+# Try to import federated learning API
+try:
+    from federated_api import router as federated_router
+    FEDERATED_AVAILABLE = True
+except ImportError as e:
+    logger.warning(f"Federated learning API not available: {e}")
+    FEDERATED_AVAILABLE = False
+
 # Initialize FastAPI
 app = FastAPI(
     title="ChakraVyuh Testing & SOC Dashboard",
@@ -50,6 +58,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include federated learning routes
+if FEDERATED_AVAILABLE:
+    app.include_router(federated_router)
+    logger.info("✓ Federated learning API routes included")
+
 
 # Global state
 detector: Optional[ThreatDetector] = None
