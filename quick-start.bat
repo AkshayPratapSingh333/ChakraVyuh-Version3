@@ -75,11 +75,11 @@ echo Run these commands in separate terminals:
 echo.
 echo Terminal 1 - Backend API:
 echo   cd backend_api
-echo   python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+echo   python main.py
 echo.
 echo Terminal 2 - Frontend Dashboard:
 echo   cd frontend_dashboard
-echo   npm start
+echo   npm run dev
 echo.
 echo Then open: http://localhost:3000
 echo.
